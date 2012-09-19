@@ -1,4 +1,4 @@
-<%= form_for(@student) do |f| %>
+<%= simple_form_for(@student, :html => { :class => "form-vertical" }) do |f| %>
   <% if @student.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(@student.errors.count, "error") %> prohibited this student from being saved:</h2>
@@ -11,53 +11,18 @@
     </div>
   <% end %>
 
-  <div class="field">
-    <%= f.label :name %><br />
-    <%= f.text_field :name %>
-  </div>
-  <div class="field">
-    <%= f.label :birthdate %><br />
-    <%= f.date_select :birthdate %>
-  </div>
-  <div class="field">
-    <%= f.label :address %><br />
-    <%= f.text_area :address %>
-  </div>
-  <div class="field">
-    <%= f.label :phone %><br />
-    <%= f.text_field :phone %>
-  </div>
-  <div class="field">
-    <%= f.label :altphone %><br />
-    <%= f.text_field :altphone %>
-  </div>
-  <div class="field">
-    <%= f.label :emergency_contact_name %><br />
-    <%= f.text_field :emergency_contact_name %>
-  </div>
-  <div class="field">
-    <%= f.label :emergency_contact_phone %><br />
-    <%= f.text_field :emergency_contact_phone %>
-  </div>
-  <div class="field">
-    <%= f.label :email %><br />
-    <%= f.text_field :email %>
-  </div>
-  <div class="field">
-    <%= f.label :how_found %><br />
-    <%= f.text_area :how_found %>
-  </div>
-  <div class="field">
-    <%= f.label :prior_experience %><br />
-    <%= f.text_area :prior_experience %>
-  </div>
-  <div class="field">
-    <%= f.label :current_health %><br />
-    <%= f.text_field :current_health %>
-  </div>
-  <div class="field">
-    <%= f.label :acceptance_of_terms %><br />
-    <%= f.check_box :acceptance_of_terms %>
+    <%= f.input :name %>
+    <%= f.input :birthdate %>
+    <%= f.input :address %>
+    <%= f.input :phone %>
+    <%= f.input :altphone %>
+    <%= f.input :emergency_contact_name %>
+    <%= f.input :emergency_contact_phone %>
+    <%= f.email_field :email %>
+    <%= f.input :how_found %>
+    <%= f.input :prior_experience %>
+    <%= f.input :current_health %>
+    <%= f.input :acceptance_of_terms %>
   </div>
   <div class="actions">
     <%= f.submit %>
