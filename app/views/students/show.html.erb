@@ -1,0 +1,65 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Name:</b>
+  <%= @student.name %>
+</p>
+
+<p>
+  <b>Birthdate:</b>
+  <%= @student.birthdate %>
+</p>
+
+<p>
+  <b>Address:</b>
+  <%= @student.address %>
+</p>
+
+<p>
+  <b>Phone:</b>
+  <%= @student.phone %>
+</p>
+
+<p>
+  <b>Altphone:</b>
+  <%= @student.altphone %>
+</p>
+
+<p>
+  <b>Emergency contact name:</b>
+  <%= @student.emergency_contact_name %>
+</p>
+
+<p>
+  <b>Emergency contact phone:</b>
+  <%= @student.emergency_contact_phone %>
+</p>
+
+<p>
+  <b>Email:</b>
+  <%= @student.email %>
+</p>
+
+<p>
+  <b>How found:</b>
+  <%= @student.how_found %>
+</p>
+
+<p>
+  <b>Prior experience:</b>
+  <%= @student.prior_experience %>
+</p>
+
+<p>
+  <b>Current health:</b>
+  <%= @student.current_health %>
+</p>
+
+<p>
+  <b>Acceptance of terms:</b>
+  <%= @student.acceptance_of_terms %>
+</p>
+
+
+<%= link_to 'Edit', edit_student_path(@student) %> |
+<%= link_to 'Back', students_path %>
