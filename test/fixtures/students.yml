@@ -12,7 +12,7 @@ one:
   how_found: MyText
   prior_experience: MyText
   current_health: MyString
-  acceptance_of_terms: false
+  acceptance_of_terms: true 
 
 two:
   name: MyString

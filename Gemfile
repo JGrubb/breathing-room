@@ -6,6 +6,7 @@ gem 'rails', '3.2.8'
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
 gem 'simple_form'
+gem 'paperclip'
 
 # Gems used only for assets and not required
 # in production environments by default.
@@ -23,6 +24,13 @@ end
 
 group :development do
   gem 'sqlite3'
+end
+
+gem 'rspec-rails', :group => [:test, :development]
+group :test do
+  gem 'factory_girl_rails'
+  gem 'capybara'
+  gem 'guard-rspec'
 end
 
 group :production do
