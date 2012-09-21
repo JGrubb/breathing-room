@@ -1,4 +1,12 @@
 BreathingRoom::Application.routes.draw do
+
+  controller :sessions do
+    get 'login' => :new, :as => :new_session
+    post 'login' => :create
+    post 'logout' => :destroy, :as => :logout
+  end
+
+  resources :users
   resources :students
 
   # The priority is based upon order of creation:
@@ -50,7 +58,7 @@ BreathingRoom::Application.routes.draw do
 
   # You can have the root of your site routed with "root"
   # just remember to delete public/index.html.
-  # root :to => 'welcome#index'
+  root :to => 'students#index'
 
   # See how all your routes lay out with "rake routes"
 
